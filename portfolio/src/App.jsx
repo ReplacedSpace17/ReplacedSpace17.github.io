@@ -18,11 +18,10 @@ function App() {
       </div>
       <h1>Vite + example</h1>
       <div className="card">
-       <a href="/portfolio/assets/cv.pdf" download>
-  <button>
-    Descargar CV
-  </button>
+      <a href="/cv.pdf" download>
+  <button>Descargar CV</button>
 </a>
+
 
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
