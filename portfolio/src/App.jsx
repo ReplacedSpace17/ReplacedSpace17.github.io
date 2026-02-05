@@ -16,11 +16,14 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + example</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+       <a href="/portfolio/assets/cv.pdf" download>
+  <button>
+    Descargar CV
+  </button>
+</a>
+
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
