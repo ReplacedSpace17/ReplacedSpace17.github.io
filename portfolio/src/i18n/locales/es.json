@@ -1,0 +1,13 @@
+{
+  "header": {
+    "home": "Inicio",
+    "research": "Investigación",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Bienvenido a mi portafolio",
+    "description": "Desarrollador web especializado en React y Vite",
+    "projects": "Ver Proyectos"
+  }
+}
