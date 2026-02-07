@@ -5,9 +5,31 @@
     "projects": "Proyectos",
     "contact": "Contacto"
   },
-  "hero": {
-    "title": "Bienvenido a mi portafolio",
-    "description": "Desarrollador web especializado en React y Vite",
-    "projects": "Ver Proyectos"
+  "home": {
+    "title": "Javier Gutiérrez-Ramírez",
+    "description": "M.Sc. en Ciencias de la Computación · IA & Visión por Computadora. Aplicación de inteligencia artificial a sistemas biológicos y desarrollo de software científico.",
+    "button": "Hablemos"
+  },
+  "about_me": {
+    "title": "Sobre mí",
+    "description": "Soy científico de la computación especializado en inteligencia artificial aplicada y visión por computadora, con experiencia en el desarrollo de sistemas inteligentes para análisis biológico, salud digital y plataformas basadas en datos. Cuento con una licenciatura en Ingeniería en Sistemas Computacionales y una maestría en Ciencias de la Computación, donde mi investigación se centró en el procesamiento de imágenes en tiempo real y la inferencia neuronal para el monitoreo de cultivos de microalgas. Mi trabajo integra aprendizaje automático, ingeniería de software científico y colaboración interdisciplinaria, con un fuerte énfasis en la reproducibilidad, la ciencia abierta y la transferencia de la investigación hacia soluciones prácticas de alto impacto.",
+    "labels": [
+      "Visión por Computadora",
+      "Inteligencia Artificial",
+      "Bioinformática"
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Mis habilidades técnicas incluyen:",
+    "languages": "Lenguajes y Herramientas",
+    "libraries": "Librerías y Frameworks",
+    "databases": "Bases de Datos"
+  },
+  "research": {
+    "title": "Investigación",
+    "research": "Áreas de Investigación",
+    "publications": "Publicaciones",
+    "talks": "Charlas y Conferencias"
   }
 }

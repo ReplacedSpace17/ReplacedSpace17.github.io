@@ -1,0 +1,181 @@
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  user-select: none;
+  
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  width: 24px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 14px;
+  opacity: 0.6;
+}
+
+.scroll-indicator span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* Pulso */
+.profile-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    animation: pulse 2.5s ease-out infinite;
+}
+
+/* Segundo pulso (opcional, más elegante) */
+.profile-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    animation: pulse 2.5s ease-out infinite;
+    animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(44, 160, 243, 0.79);
+    }
+    100% {
+        box-shadow: 0 0 0 40px rgba(0, 255, 200, 0);
+    }
+}
+
+/* ===============================
+   BOTÓN CON EFECTO WAVE DESDE ESQUINA
+   =============================== */
+
+.wave-button {
+    --accent: #2CA0F3;
+
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px ;
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 6px;
+
+    padding: 10px 20px;
+    width: 180px;
+
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+
+    cursor: pointer;
+    outline: none;
+
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease;
+
+    z-index: 0;
+}
+
+/* Círculo de la onda */
+.wave-button::before {
+    content: "";
+    position: absolute;
+
+    width: 300%;
+    height: 300%;
+
+    background-color: var(--accent);
+    border-radius: 50%;
+
+    top: 100%;
+    left: 100%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+
+    z-index: -1;
+}
+
+/* Hover */
+.wave-button:hover {
+    color: #ffffff;
+    border: 2px solid #2CA0F3;
+}
+
+.wave-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Active (feedback) */
+.wave-button:active::before {
+    background-color: #000000;
+    transition: background-color 0.1s;
+}
+
+/* Accesibilidad: foco visible */
+.wave-button:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 2px;
+}
+

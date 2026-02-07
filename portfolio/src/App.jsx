@@ -1,14 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
-import HeroSection from "./pages/HeroSection"
-import Example from "./pages/Example"
-
+import Inicio from "./pages/Inicio"
+import Research from "./pages/Research"
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Example />} />
+        <Route path="/" element={<Inicio />} />
+        <Route path="/research" element={<Research />} />
       </Routes>
     </Router>
   )

@@ -15,5 +15,20 @@
     "title": "About Me",
     "description": "I am a computer scientist specializing in applied artificial intelligence and computer vision, with experience in developing intelligent systems for biological analysis, digital health, and data-driven platforms. I hold a B.Sc. in Computer Systems Engineering and an M.Sc. in Computer Science, where my research focused on real-time image processing and neural inference for microalgae culture monitoring. My work combines machine learning, scientific software engineering, and interdisciplinary collaboration, with a strong emphasis on reproducibility, open science, and the translation of research into practical, high-impact solutions.",
     "labels": ["Computer Vision", "Artificial Intelligence", "Bioinformatics"]
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "My technical skills include:",
+    "languages": "Languages and Tools",
+    "libraries": "Libraries and Frameworks",
+    "databases": "Databases"
+  },
+  "research": {
+    "title": "Research",
+    "research": "Research Areas",
+    "publications": "Publications",
+    "talks": "Talks & Conferences"
   }
 }
+
+

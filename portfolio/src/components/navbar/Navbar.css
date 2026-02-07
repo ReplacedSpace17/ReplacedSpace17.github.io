@@ -12,7 +12,7 @@
   backdrop-filter: blur(12px);
   border-radius: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.038); 
-  border: 1.5px solid #11111152;
+  border: 1.5px solid #00000031;
 
   transition: all 0.3s ease;
   user-select: none;
