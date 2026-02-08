@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import Swal from "sweetalert2";
 
 import "./style/contact.css";
