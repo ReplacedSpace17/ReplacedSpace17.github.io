@@ -1,0 +1,110 @@
+/* ===== Section ===== */
+.talks-section {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+
+  /* Fondo tipo líneas con parallax */
+  background-color: #f9fafb; /* fondo base muy claro */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #f9fafb,
+    #f9fafb 19px,
+    #e5e7eb 20px
+  ); /* línea gris clara cada 20px */
+  background-attachment: fixed; /* efecto parallax */
+  background-position: center top;
+}
+
+/* ===== Container ===== */
+.talks-container {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  
+}
+
+/* ===== Title ===== */
+.talks-title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;           /* igual que publications */
+  font-weight: 600;           /* igual que publications */
+  color: #1f2937;             /* igual que publications */
+  margin-bottom: 48px;        /* igual que publications */
+  letter-spacing: -0.02em;    /* igual que publications */
+  text-align: start;         /* centrado */
+}
+
+/* ===== List Wrapper ===== */
+.talks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== Individual Card ===== */
+.talks-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Hover profesional */
+.talks-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Year Column */
+.talks-year {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #6366f1; /* color distintivo */
+  width: 80px;
+  text-align: center;
+  margin-right: 24px;
+}
+
+/* Content Column */
+.talks-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.talks-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.talks-location {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .talks-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .talks-year {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}

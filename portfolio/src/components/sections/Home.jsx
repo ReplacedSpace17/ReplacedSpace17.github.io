@@ -11,6 +11,7 @@ import github from "../../assets/github.svg";
 import instagram from "../../assets/instagram.svg";
 import email from "../../assets/email.svg";
 import foto from "../../assets/images/photo.jpg";
+import { useNavigate } from "react-router-dom";
 
 /* =======================
    Animations
@@ -44,7 +45,12 @@ const fadeRight = {
 };
 
 const HomeSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  const go = (path) => {
+    navigate(path);
+  };
 
   /* =======================
      Social URLs
@@ -112,6 +118,7 @@ const HomeSection = () => {
 
   return (
     <motion.section
+    key={i18n.language}
       className="hero"
       initial="hidden"
       animate="visible"
@@ -227,6 +234,7 @@ const HomeSection = () => {
             whileTap={{ scale: 0.97 }}
             className="wave-button"
             style={{ marginTop: "30px" }}
+            onClick={() => go("/contact")}
           >
             {t("home.button")}
           </motion.button>

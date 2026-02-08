@@ -29,7 +29,96 @@
   "research": {
     "title": "Investigación",
     "research": "Áreas de Investigación",
+    "section1": "Mis intereses de investigación se enfocan en el diseño de sistemas computacionales inteligentes para el análisis, modelado y control de sistemas complejos, con énfasis particular en aplicaciones biológicas y ambientales. Me interesa la integración de aprendizaje automático, visión por computadora y sistemas embebidos para la toma de decisiones en tiempo real, así como su extensión a dominios relacionados con la aeronáutica.",
+    "section1_areas": [
+      "IA para Biología",
+      "Visión por Computadora",
+      "IA en Borde",
+      "Aplicaciones Aeroespaciales"
+    ],
     "publications": "Publicaciones",
-    "talks": "Charlas y Conferencias"
+    "talks": "Conferencias y Charlas",
+    "list": [
+      {
+        "name": "Asociación Colombiana de Facultades de Ingeniería (ACOFI)",
+        "year": 2024,
+        "location": "Cartagena de Indias, Colombia"
+      },
+      {
+        "name": "4ta Reunión de Bioinformática y Redes Complejas",
+        "year": 2025,
+        "location": "Antigua Guatemala, Guatemala"
+      },
+      {
+        "name": "Asociación Colombiana de Facultades de Ingeniería (ACOFI)",
+        "year": 2025,
+        "location": "Cartagena de Indias, Colombia"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "btn": "Ver en GitHub",
+    "btn2": "Confidencial",
+    "my_projects": [
+      {
+        "title": "Bioharvest",
+        "resume": "Sistema de monitoreo y análisis de crecimiento en cultivos de microalgas mediante redes neuronales y visión por computadora.",
+        "image_name": "bioharvest.png",
+        "link": "https://github.com/Singularity-MX/Bioharvest",
+        "private": false
+      },
+      {
+        "title": "Evaluasaurio",
+        "resume": "Plataforma de evaluación que permite a estudiantes evaluar de forma anónima el desempeño de sus docentes en sus respectivas materias.",
+        "image_name": "evaluasaurio.png",
+        "link": "https://github.com/ReplacedSpace17/Evaluasaurio",
+        "private": false
+      },
+      {
+        "title": "Axiom",
+        "resume": "Plataforma de registro y seguimiento de proyectos científicos de ciencia abierta en la blockchain.",
+        "image_name": "axiom.png",
+        "link": "https://github.com/ReplacedSpace17/axiom",
+        "private": false
+      },
+      {
+        "title": "Segucom",
+        "resume": "Software de seguimiento y gestión de elementos de la fuerza pública, con el objetivo de mejorar la transparencia en las operaciones policiales.",
+        "image_name": "segucom.png",
+        "link": "",
+        "private": true
+      },
+      {
+        "title": "Glucontrol",
+        "resume": "App móvil para monitorear glucosa, dieta y actividad física, integrando análisis de datos biológicos para seguimiento de la salud.",
+        "image_name": "glucontrol.png",
+        "link": "https://github.com/Singularity-MX/Glucontrol_App",
+        "private": false
+      },
+      {
+        "title": "Life-Up",
+        "resume": "Plataforma para gestión y optimización de las actividades, registros de asistencia y desempeño en centros gerontológicos.",
+        "image_name": "lifeup.png",
+        "link": "https://github.com/Singularity-MX/Life-Up-App",
+        "private": false
+      },
+      {
+        "title": "Stellarium",
+        "resume": "Aplicación web interactiva para visualizar objetos NEAs, NECs y PHAs y permitir explorar sus órbitas mediante modelos dinámicos.",
+        "image_name": "stellarium.png",
+        "link": "https://github.com/ReplacedSpace17/Stellarium",
+        "private": false
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme mediante los siguientes canales.",
+    "btn_email": "Enviar Email",
+    "btn_secondary": "Descargar CV",
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje"
   }
 }

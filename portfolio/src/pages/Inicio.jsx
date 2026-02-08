@@ -7,7 +7,7 @@ import Inter_Skills from '../components/sections/Inter_Skills';
 import Skills from '../components/sections/Skills';
 
 const Inicio = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <Navbar nombre={t("header.home")} />

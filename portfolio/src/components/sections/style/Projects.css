@@ -1,0 +1,138 @@
+/* ===== Section ===== */
+.projects-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #f8fafc;
+  user-select: none;
+  /* Fondo suave tipo parallax */
+  background-image: radial-gradient(circle, #e2e8f0 2px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+/* ===== Container ===== */
+.projects-container {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Title ===== */
+.projects-title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 48px;
+  margin-top: 48px;
+  letter-spacing: -0.02em;
+  text-align: start;
+  
+}
+
+/* ===== Cards List ===== */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ===== Individual Card ===== */
+.project-card {
+  width: 248px;
+  height: 370px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+  border: 1.5px solid #00000039;
+  will-change: transform, box-shadow, filter; /* optimiza animación */
+  
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02); /* leve elevación + zoom */
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12); /* sombra más dramática */
+  border-color: #3a3a3a; /* borde azul sutil */
+  filter: brightness(1.03); /* ligero glow */
+  
+}
+
+
+/* ===== Image ===== */
+.project-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 12px;
+}
+
+/* ===== Project Name ===== */
+.project-name {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ===== Project Summary ===== */
+.project-summary {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: justify;
+  margin-bottom: 60px; /* espacio reservado para el botón */
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+/* ===== Button ===== */
+.project-button {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2CA0F3;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: #2384d4;
+  color: white;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .projects-list {
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+    padding-bottom: 64px; /* espacio para botón */
+  }
+
+  .project-summary {
+    margin-bottom: 64px;
+  }
+}

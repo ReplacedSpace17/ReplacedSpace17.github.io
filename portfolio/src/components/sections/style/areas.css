@@ -1,0 +1,166 @@
+/* ===== Section ===== */
+.areas-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* ===== Container ===== */
+.areas-container {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Title ===== */
+.areas-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.areas-title {
+  color: #111827;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+/* ===== Paragraph ===== */
+.areas-paragraph {
+  font-size: 22px;
+  color: #4e4e4e;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+/* ===== Cards Wrapper ===== */
+.areas-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* ===== Card ===== */
+.area-card {
+  width: 170px;
+  height: 170px;
+  background-color: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.29);
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.11);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ===== Icon ===== */
+.area-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+
+}
+
+/* ===== Label ===== */
+.area-card-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000c7;
+  margin-top: 10px;
+  width: 80%;
+  font-family: "Inter", sans-serif;
+}
+/* ===== Card Interaction ===== */
+.area-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  cursor: pointer;
+}
+
+/* Hover principal */
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0px 12px 32px rgba(0, 0, 0, 0.16);
+  border-color: rgba(0, 0, 0, 0.843);
+}
+
+/* Icono: énfasis sutil */
+.area-card:hover .area-card-icon {
+  transform: scale(1.06);
+  filter: brightness(0);
+}
+
+/* Label: refuerzo de jerarquía */
+.area-card:hover .area-card-label {
+  color: #000000;
+}
+
+/* Transiciones internas */
+.area-card-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.area-card-label {
+  transition: color 0.3s ease;
+}
+
+/* ===== Scroll Indicator ===== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* Línea */
+.scroll-line {
+  width: 1px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 6px;
+}
+
+/* Punto animado */
+.scroll-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: scrollPulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Animación sutil */
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+}

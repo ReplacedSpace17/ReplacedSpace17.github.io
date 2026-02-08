@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import './style/home.css';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // Animaciones
   const paragraphVariants = {
@@ -19,9 +19,10 @@ const About = () => {
 
   return (
     <motion.section
+    key={i18n.language}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.7 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       style={{
         width: "100vw",
@@ -30,7 +31,7 @@ const About = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        backgroundColor: "#ffffffff"
+        backgroundColor: "#f8fafc"
       }}
     >
       <div style={{

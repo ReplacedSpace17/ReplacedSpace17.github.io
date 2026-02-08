@@ -2,7 +2,7 @@ import image from "../../assets/images/about.webp";
 import { useTranslation } from "react-i18next";
 
 const Inter_About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div

@@ -1,92 +1,87 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import './style/home.css';
+import "./style/areas.css";
+
+import dna from "../../assets/dna.svg";
+import vision from "../../assets/vision.svg";
+import iot from "../../assets/iot.svg";
+import rocket from "../../assets/rocket.svg";
+
+const areaIcons = [dna, vision, iot, rocket];
 
 const Areas = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  // Animaciones
   const paragraphVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const labelVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1 },
   };
 
+  const areas = t("research.section1_areas", { returnObjects: true });
+console.log("Areas:", areas);
+
   return (
     <motion.section
+    key={i18n.language}
+      className="areas-section"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      
       transition={{ duration: 0.8, ease: "easeOut" }}
-      style={{
-        width: "100vw",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        backgroundColor: "#ffffffff"
-      }}
     >
-      <div style={{
-        width: "80%",
-        maxWidth: "1200px",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column"
-      }}>
-        {/* Párrafo animado */}
+      <div className="areas-container">
+        {/* Título */}
+        <div className="areas-title-wrapper">
+          <h1 className="areas-title">
+            {t("research.research")}
+          </h1>
+        </div>
+
+        {/* Párrafo */}
         <motion.p
+          className="areas-paragraph"
           variants={paragraphVariants}
           transition={{ duration: 0.8 }}
-          style={{
-            fontSize: "22px",
-            color: "#4e4e4e",
-            fontFamily: "Inter",
-            fontWeight: 400,
-            lineHeight: "1.8",
-            textAlign: "justify",
-            marginBottom: "24px"
-          }}
         >
-          {t("about_me.description")}
+          {t("research.section1")}
         </motion.p>
 
-        <div style={{
-          display: "flex",
-          gap: "12px",
-          flexWrap: "wrap",
-        }}>
-          {t("about_me.labels", { returnObjects: true }).map((label, index) => (
+        {/* Cards */}
+        <div className="areas-cards">
+          {areas.map((area, index) => (
             <motion.div
-              key={index}
-              variants={labelVariants}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              style={{
-                padding: '12px 20px',
-                backgroundColor: "#ffffff",
-                border: '1px solid #C8C8C8',
-                borderRadius: '30px',
-                fontSize: "14px",
-                color: "#333",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              key={area}
+              className="area-card"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, margin: "0px" }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
             >
-              {label}
+              <img
+                src={areaIcons[index]}
+                alt={area}
+                className="area-card-icon"
+              />
+
+              <div className="area-card-label">
+                {area}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+        {/* Scroll indicator */}
+  <div className="scroll-indicator">
+    <span className="scroll-line" />
+    <span className="scroll-dot" />
+  </div>
     </motion.section>
   );
 };

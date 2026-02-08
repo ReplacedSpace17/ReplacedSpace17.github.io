@@ -1,7 +1,7 @@
-import image from "../../assets/images/skills.jpg";
+import image from "../../assets/images/publications.jpg";
 import { useTranslation } from "react-i18next";
 
-const Inter_Skills = () => {
+const Inter_Publications = () => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -31,6 +31,8 @@ const Inter_Skills = () => {
           width: "100%",
           height: "100%",
           backgroundColor: "rgba(0, 0, 0, 0.4)", // negro semi-transparente
+           backdropFilter: "blur(6px)",
+    WebkitBackdropFilter: "blur(6px)", // Safari
           zIndex: 1,
         }}
       />
@@ -45,10 +47,10 @@ const Inter_Skills = () => {
           textShadow: "2px 2px 8px rgba(0,0,0,0.7)", // para que resalte sobre la imagen
         }}
       >
-        {t("skills.title")}
+        {t("research.publications")}
       </h1>
     </div>
   );
 };
 
-export default Inter_Skills;
+export default Inter_Publications;

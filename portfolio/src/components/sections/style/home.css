@@ -65,45 +65,35 @@
     z-index: 2;
 }
 
-/* Pulso */
-.profile-wrapper::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    animation: pulse 2.5s ease-out infinite;
-}
-
-/* Segundo pulso (opcional, más elegante) */
+.profile-wrapper::before,
 .profile-wrapper::after {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    animation: pulse 2.5s ease-out infinite;
+    z-index: 1;
+    animation: pulse-shadow 2.5s ease-out infinite;
+    box-shadow: 0 0 0 0 #2CA0F3;
+}
+
+.profile-wrapper::after {
     animation-delay: 1.2s;
 }
 
-@keyframes pulse {
+@keyframes pulse-shadow {
     0% {
         transform: scale(1);
         opacity: 0.8;
+        box-shadow: 0 0 0 8px #2CA0F3; /* grosor inicial */
     }
     100% {
-        transform: scale(1.4);
+        transform: scale(1.3);
         opacity: 0;
+        box-shadow: 0 0 0 40px #2CA0F3; /* grosor máximo */
     }
 }
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(44, 160, 243, 0.79);
-    }
-    100% {
-        box-shadow: 0 0 0 40px rgba(0, 255, 200, 0);
-    }
-}
+
+
 
 /* ===============================
    BOTÓN CON EFECTO WAVE DESDE ESQUINA

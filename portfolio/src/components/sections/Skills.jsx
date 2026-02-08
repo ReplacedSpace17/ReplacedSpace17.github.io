@@ -9,7 +9,7 @@ import { FaJava, FaNodeJs, FaMicrosoft, FaGitAlt, FaDocker} from "react-icons/fa
 import { MdOutlineHub } from "react-icons/md";
 
 const Skills = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const languages = [
     { icon: <SiTypescript size={40} color="#3178C6" />, name: "TypeScript" },
@@ -83,9 +83,10 @@ const Skills = () => {
 
   return (
     <motion.section
+    key={i18n.language}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.7 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       style={{
         width: "100vw",

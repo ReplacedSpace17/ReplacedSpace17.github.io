@@ -1,11 +1,10 @@
 {
-    "header": {
+  "header": {
     "home": "Home",
     "research": "Research",
     "projects": "Projects",
     "contact": "Contact"
   },
-  
   "home": {
     "title": "Javier Gutierrez-Ramirez",
     "description": "M.Sc. in Computer Science · AI & Computer Vision Engineer. Applied artificial intelligence for biological systems and scientific software.",
@@ -14,7 +13,11 @@
   "about_me": {
     "title": "About Me",
     "description": "I am a computer scientist specializing in applied artificial intelligence and computer vision, with experience in developing intelligent systems for biological analysis, digital health, and data-driven platforms. I hold a B.Sc. in Computer Systems Engineering and an M.Sc. in Computer Science, where my research focused on real-time image processing and neural inference for microalgae culture monitoring. My work combines machine learning, scientific software engineering, and interdisciplinary collaboration, with a strong emphasis on reproducibility, open science, and the translation of research into practical, high-impact solutions.",
-    "labels": ["Computer Vision", "Artificial Intelligence", "Bioinformatics"]
+    "labels": [
+      "Computer Vision",
+      "Artificial Intelligence",
+      "Bioinformatics"
+    ]
   },
   "skills": {
     "title": "Skills",
@@ -26,9 +29,96 @@
   "research": {
     "title": "Research",
     "research": "Research Areas",
+    "section1": "My research interests focus on the design of intelligent computational systems for the analysis, modeling, and control of complex systems, with particular emphasis on biological and environmental applications. I am interested in the integration of machine learning, computer vision, and embedded systems for real-time decision-making, as well as their extension to aerospace-related domains.",
+    "section1_areas": [
+      "AI for Biological",
+      "Computer Vision",
+      "Edge AI",
+      "Aerospace Applications"
+    ],
     "publications": "Publications",
-    "talks": "Talks & Conferences"
+    "talks": "Talks & Conferences",
+    "list": [
+      {
+        "name": "Colombian Association of Faculties of Engineering (ACOFI)",
+        "year": 2024,
+        "location": "Cartagena de Indias, Colombia"
+      },
+      {
+        "name": "4th Meeting on Bioinformatics and Complex Networks",
+        "year": 2025,
+        "location": "Antigua Guatemala, Guatemala"
+      },
+      {
+        "name": "Colombian Association of Faculties of Engineering (ACOFI)",
+        "year": 2025,
+        "location": "Cartagena de Indias, Colombia"
+      }
+    ]
+  },
+  "projects": {
+    "title": "My Projects",
+    "btn": "View in GitHub",
+    "btn2": "Confidential",
+    "my_projects": [
+      {
+        "title": "Bioharvest",
+        "resume": "Monitoring and growth analysis system for microalgae cultures using neural networks and computer vision.",
+        "image_name": "bioharvest.png",
+        "link": "https://github.com/Singularity-MX/Bioharvest",
+        "private": false
+      },
+      {
+        "title": "Evaluasaurio",
+        "resume": "Evaluation platform that allows students to anonymously assess the performance of their instructors in their respective subjects.",
+        "image_name": "evaluasaurio.png",
+        "link": "https://github.com/ReplacedSpace17/Evaluasaurio",
+        "private": false
+      },
+      {
+        "title": "Axiom",
+        "resume": "Platform for recording and tracking open science projects on the blockchain.",
+        "image_name": "axiom.png",
+        "link": "https://github.com/ReplacedSpace17/axiom",
+        "private": false
+      },
+      {
+        "title": "Segucom",
+        "resume": "Monitoring and management software for public force elements, aimed at improving transparency in police operations.",
+        "image_name": "segucom.png",
+        "link": "",
+        "private": true
+      },
+      {
+        "title": "Glucontrol",
+        "resume": "Mobile app for monitoring glucose, diet, and physical activity, integrating biological data analysis for health tracking.",
+        "image_name": "glucontrol.png",
+        "link": "https://github.com/Singularity-MX/Glucontrol_App",
+        "private": false
+      },
+      {
+        "title": "Life-Up",
+        "resume": "Platform for managing and optimizing activities, attendance records, and performance in gerontological centers.",
+        "image_name": "lifeup.png",
+        "link": "https://github.com/Singularity-MX/Life-Up-App",
+        "private": false
+      },
+      {
+        "title": "Stellarium",
+        "resume": "Interactive web application to visualize NEAs, NECs, and PHAs and explore their orbits through dynamic models.",
+        "image_name": "stellarium.png",
+        "link": "https://github.com/ReplacedSpace17/Stellarium",
+        "private": false
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "I am open to new opportunities and collaborations. Feel free to reach out to me through the following channels.",
+    "btn_email": "Send Email",
+    "btn_secondary": "Download CV",
+    "name":"Your Name",
+    "email": "Your Email",
+    "message": "Your Message"
   }
 }
-
-

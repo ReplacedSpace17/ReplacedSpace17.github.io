@@ -8,8 +8,8 @@
   max-width: 1200px;
   z-index: 1000;
 
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.222);
+  backdrop-filter: blur(20px);
   border-radius: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.038); 
   border: 1.5px solid #00000031;
@@ -28,8 +28,8 @@
 
 /* Brand */
 .navbar__brand {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 300;
   color: #2b2b2b;
   letter-spacing: 1px;
 }

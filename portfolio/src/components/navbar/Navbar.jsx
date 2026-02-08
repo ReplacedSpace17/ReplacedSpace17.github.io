@@ -1,14 +1,25 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
+
+import spanishFlag from "../../assets/mexico.png";
+
 const Navbar = ({ nombre }) => {
   const [open, setOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
-  const isEnglish = i18n.language.startsWith("en");
+  // Por defecto estamos en inglés
+  const isSpanish = i18n.language.startsWith("es");
 
   const toggleLang = () => {
-    i18n.changeLanguage(isEnglish ? "es" : "en");
+    // Si es español, cambiar a inglés; si no, cambiar a español
+    i18n.changeLanguage(isSpanish ? "en" : "es");
+  };
+
+  const go = (path) => {
+    navigate(path);
   };
 
   return (
@@ -26,16 +37,24 @@ const Navbar = ({ nombre }) => {
         </button>
 
         <ul className={`navbar__menu ${open ? "active" : ""}`}>
-          <li><a>{t("header.home")}</a></li>
-          <li><a>{t("header.research")}</a></li>
-          <li><a>{t("header.projects")}</a></li>
-          <li><a>{t("header.contact")}</a></li>
+          <li onClick={() => go("/")}><a>{t("header.home")}</a></li>
+          <li onClick={() => go("/research")}><a>{t("header.research")}</a></li>
+          <li onClick={() => go("/projects")}><a>{t("header.projects")}</a></li>
+          <li onClick={() => go("/contact")}><a>{t("header.contact")}</a></li>
 
-          <li className="navbar__lang">
+          <li className="navbar__lang" style={{ display: "flex", alignItems: "center" }}>
+            {/* Bandera siempre visible */}
+            <img
+              src={spanishFlag}
+              alt="Español"
+              style={{ width: "30px", marginRight: "10px" }}
+            />
+
             <label className="switch">
               <input
                 type="checkbox"
-                checked={isEnglish}
+                // El switch indica si el idioma está en español
+                checked={isSpanish}
                 onChange={toggleLang}
               />
               <span className="slider"></span>
@@ -46,6 +65,5 @@ const Navbar = ({ nombre }) => {
     </nav>
   );
 };
-
 
 export default Navbar;
